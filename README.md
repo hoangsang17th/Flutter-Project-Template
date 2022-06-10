@@ -11,8 +11,6 @@
 - You used Firebase.
 - And finally you give a star for this project
 
-
-
 ## GetX Pattern - Project Structure
 
 ```
@@ -43,7 +41,7 @@
                 |--repository.dart
             |--models -> Data modeling, fromJson, toJson
             |--providers -> Make queries with the API
-            |--repository -> Declare the implementation methods
+            |--repositories -> Declare the implementation methods
             |--datasources -> Here can be the details of the provider -> Split into local and internet data
             
         |--modulues
@@ -56,8 +54,8 @@
         |--routes -> Application Routing
             |--app_pages.dart
             |--app_routes.dart
-            
+
         |--global_widgets -> Widgets are used on multiple modules
 ```
 
-<center> [You can learn more about this architecture here](https://github.com/kauemurakami/getx_pattern)<center/>
+[You can learn more about this architecture here](https://github.com/kauemurakami/getx_pattern)
