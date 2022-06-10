@@ -1,0 +1,36 @@
+name: todo_getx_pattern
+description: This is a Todo Project . It is using Flutter with GetX Pattern
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  #  Newly added in this project
+  get: ^4.6.5
+  flutter_svg: ^1.0.3
+  json_annotation: ^4.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+  #  Newly added in this project
+  json_serializable: ^6.2.0
+  build_runner: ^2.1.11
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images
+    - assets/icons
