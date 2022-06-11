@@ -16,7 +16,7 @@ class TodoRepository {
     return await todoDataSource.updateTodo(todo);
   }
 
-  Future<bool> deleteTodo(String id) async {
+  Future<bool> deleteTodo(int id) async {
     return await todoDataSource.deleteTodo(id);
   }
 

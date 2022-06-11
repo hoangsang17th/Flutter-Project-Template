@@ -8,7 +8,6 @@
 
 - You already have the basics with flutter
 - You are familiar with the GetX package
-- You used Firebase.
 - And finally you give a star for this project
 
 ## GetX Pattern - Project Structure
