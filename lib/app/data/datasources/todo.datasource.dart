@@ -44,7 +44,7 @@ class TodoMock {
     TodoModel(
       id: 1,
       name: "This is a new project",
-      isCompleted: false,
+      isCompleted: true,
       creatAt: DateTime.now().subtract(
         const Duration(days: 2),
       ),
@@ -60,7 +60,7 @@ class TodoMock {
     TodoModel(
       id: 3,
       name: "Find out about it and apply it now",
-      isCompleted: true,
+      isCompleted: false,
       creatAt: DateTime.now(),
     ),
   ];
