@@ -26,7 +26,8 @@ class HomeView extends GetView<HomeController> {
                 child: Row(
                   children: [
                     InkWell(
-                      onTap: () => controller.onComplete(index),
+                      onTap: () =>
+                          controller.onComplete(controller.todos[index].id!),
                       child: controller.todos[index].isCompleted
                           ? SvgPicture.asset(
                               "assets/icons/check-square.svg",
@@ -49,7 +50,7 @@ class HomeView extends GetView<HomeController> {
                             controller.todos[index].name;
                         Get.bottomSheet(
                           TodoBottomSheet(
-                            index: index,
+                            id: controller.todos[index].id,
                             isUpdate: true,
                           ),
                         ).whenComplete(() {
@@ -83,10 +84,10 @@ class TodoBottomSheet extends GetView<HomeController> {
   const TodoBottomSheet({
     Key? key,
     this.isUpdate = false,
-    this.index,
+    this.id,
   }) : super(key: key);
   final bool isUpdate;
-  final int? index;
+  final int? id;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -114,7 +115,7 @@ class TodoBottomSheet extends GetView<HomeController> {
                 Obx(
                   () => InkWell(
                     onTap: () => isUpdate
-                        ? controller.onUpdate(index!)
+                        ? controller.onUpdate(id!)
                         : controller.onCreate(),
                     child: SvgPicture.asset(
                       "assets/icons/check.svg",

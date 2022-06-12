@@ -7,24 +7,22 @@ class TodoDataSource {
     return TodoMock.todos;
   }
 
-  Future<bool> updateTodo(TodoModel todo) async {
-    TodoModel? data = TodoMock.todos.firstWhereOrNull(
-      (element) => element.id == todo.id,
-    );
-    if (data != null) data = todo;
-    // If find todo Id, I will update it and return true = success
-    return data != null;
+  Future<bool> updateTodo(int id, String name) async {
+    TodoModel data = TodoMock.todos.firstWhere((element) => element.id == id);
+    data.name = name;
+    return true;
   }
 
-  Future<bool> deleteTodo(int id) async {
-    TodoMock.todos.removeWhere(
+  Future<bool> completeTodo(int id) async {
+    TodoModel data = TodoMock.todos.firstWhere(
       (element) => element.id == id,
     );
+    data.isCompleted = !data.isCompleted;
     return true;
   }
 
   Future<bool> createTodo(TodoModel todo) async {
-    todo.id = TodoMock.todos.length + 1;
+    todo.id = TodoMock.todos.length;
     TodoMock.todos.add(todo);
     return true;
   }

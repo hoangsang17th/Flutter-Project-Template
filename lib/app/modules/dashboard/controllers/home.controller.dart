@@ -25,14 +25,14 @@ class HomeController extends GetxController {
     todos.refresh();
   }
 
-  void onComplete(int index) {
-    todos[index].isCompleted = !todos[index].isCompleted;
-    todos.refresh();
+  Future<void> onComplete(int id) async {
+    await todoRepository.completeTodo(id);
+    getTodos();
   }
 
-  void onUpdate(int index) {
-    todos[index].name = todoNameController.text;
-    todos.refresh();
+  void onUpdate(int id) async {
+    await todoRepository.updateTodo(id, todoNameController.text);
+    getTodos();
     Get.back();
   }
 
@@ -44,16 +44,15 @@ class HomeController extends GetxController {
     }
   }
 
-  void onCreate() {
-    todos.add(
+  Future<void> onCreate() async {
+    await todoRepository.createTodo(
       TodoModel(
-        id: todos.length,
         name: todoNameController.text,
         isCompleted: false,
         creatAt: DateTime.now(),
       ),
     );
-    todos.refresh();
+    getTodos();
     Get.back();
   }
 }

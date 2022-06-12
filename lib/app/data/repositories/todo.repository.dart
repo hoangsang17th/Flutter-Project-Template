@@ -12,12 +12,12 @@ class TodoRepository {
     return await todoDataSource.getTodos();
   }
 
-  Future<bool> updateTodo(TodoModel todo) async {
-    return await todoDataSource.updateTodo(todo);
+  Future<bool> updateTodo(int id, String name) async {
+    return await todoDataSource.updateTodo(id, name);
   }
 
-  Future<bool> deleteTodo(int id) async {
-    return await todoDataSource.deleteTodo(id);
+  Future<bool> completeTodo(int id) async {
+    return await todoDataSource.completeTodo(id);
   }
 
   Future<bool> createTodo(TodoModel todo) async {
