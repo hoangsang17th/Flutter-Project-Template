@@ -58,25 +58,71 @@ dependencies:
   firebase_core: ^1.18.0
   firebase_messaging: ^11.4.2
   cloud_firestore: ^3.1.18
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  get: 4.6.1
+  crypt: ^4.2.1
   cupertino_icons: ^1.0.2
+  json_annotation: ^4.4.0
+  equatable: ^2.0.3
+  data_connection_checker: ^0.3.4
+  shimmer: 
+  photo_view: ^0.13.0
+  permission_handler: ^9.1.0
+  cached_network_image: ^3.2.0
+  get_storage: ^2.0.3
+  flutter_easyloading: ^3.0.3
+  google_fonts: ^2.3.1
+  provider: ^6.0.2
+  firebase_dynamic_links: ^4.1.1
+  firebase_analytics: ^9.1.2
+  url_launcher: ^6.0.20
+  google_sign_in: ^5.2.4
+  encrypt: ^5.0.1
+  platform_device_id: ^1.0.1
+  flutter_windowmanager: ^0.2.0
+  dartz: ^0.10.1
+  # 
+  flutter_mentions: ^2.0.1
+  flutter_quill: ^4.2.1
+  timeago: ^3.2.2
+  # dropdown_button2: ^1.5.1
+  # flutter_webview_plugin: ^0.4.0
+  package_info_plus: ^1.4.2
+  # flutter_uploader: ^1.2.1
+  photo_manager: ^2.1.1
+  animated_text_kit: ^4.2.1
+  local_auth: ^2.1.0
+  # meta: ^1.7.0
+  # extended_image: ^6.2.1
+  syncfusion_flutter_charts: ^20.1.56
+  # firebase_messaging: ^11.4.0
+  upgrader: ^4.2.0
+  date_picker_timeline: ^1.2.3
+  any_link_preview: ^2.0.8
+  flutter_rounded_date_picker: ^2.0.2
+  quick_actions: ^0.6.0+11
+  # gallery_saver: ^2.3.2
+  injectable: ^1.5.3
+  extended_image: ^6.1.0
+  dio: ^4.0.6
+  file_picker: ^4.6.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^1.0.0
+  build_runner: ^2.1.7
+  json_serializable: ^6.1.4
+  flutter_launcher_icons: ^0.9.2
+  injectable_generator: ^1.5.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo_launcher.png"
 
 # The following section is specific to Flutter.
 flutter:
@@ -87,9 +133,13 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/sounds/
+    - assets/videos/
+    - assets/locales/
+    - assets/images/avatars/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
